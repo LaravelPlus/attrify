@@ -1,0 +1,59 @@
+{
+    "name": "laravelplus/attrify",
+    "description": "laravelplus/attrify streamlines Laravel validation by leveraging PHP attributes for expressive, annotation-based rules directly within your request classes. This package transforms how you define constraints, delivering cleaner code, centralized configuration, and a more intuitive development workflow. With attrify, maintaining and evolving complex validation logic becomes easier than ever—just annotate, refine, and let Laravel handle the rest.",
+    "keywords": [
+        "laravelplus",
+        "attrify"
+    ],
+    "homepage": "https://github.com/laravelplus/attrify",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nejcc",
+            "email": "info@after.si",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.8.0",
+        "fakerphp/faker": "^1.24.1",
+        "laravel/pail": "^1.2.1",
+        "laravel/pint": "^1.18.3",
+        "mockery/mockery": "^1.6.12",
+        "nunomaduro/collision": "^v8.5.0",
+        "phpunit/phpunit": "^11.5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravelplus\\Attrify\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laravelplus\\Attrify\\AttrifyServiceProvider"
+            ],
+            "aliases": {
+                "Attrify": "Laravelplus\\Attrify\\AttrifyFacade"
+            }
+        }
+    }
+}
